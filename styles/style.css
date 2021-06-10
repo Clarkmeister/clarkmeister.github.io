@@ -21,24 +21,34 @@ p, li {
 }
 
 body {
-  width: 50%;
-  min-width: 599;
+  min-width: 300px;
+  max-width: 80%;
   margin: 0 auto;
   background-color: #FFD14E;
-  padding: 0 20px 20px 20px;
+  padding: 0 5% 5% 5%;
   border: 5px solid black;
 }
 
-img, figcaption {
+img {
   display: block;
   margin: 0  auto;
-  width: 50%;
+  max-width: 100%;
+  min-width: 150px;
 }
 
 video {
   display: block;
   margin: 0  auto;
-  width: 75%;
+  max-width: 100%;
+  min-width: 150px;
+}
+
+.videoCaption {
+  text-align: left;
+}
+
+figcaption {
+  text-align: center;
 }
 
 /* Add a black background color to the top navigation */
