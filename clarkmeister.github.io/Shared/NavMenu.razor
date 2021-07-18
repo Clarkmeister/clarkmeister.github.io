@@ -1,8 +1,20 @@
 ﻿<div>
+    <ul class="nav-bar">
+        <li class="nav-item">
+            <button class="menu-btn" @onclick="ToggleNavMenu">
+                Menu
+            </button>
+        </li>
+    </ul>
+</div>
+
+@if (collapseNavMenu)
+{
+<div>
     <ul>
         <li>
             <NavLink href="" Match="NavLinkMatch.All">
-                 Home
+                Home
             </NavLink>
         </li>
         <li>
@@ -17,11 +29,10 @@
         </li>
     </ul>
 </div>
+}
 
 @code {
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private bool collapseNavMenu = false;
 
     private void ToggleNavMenu()
     {

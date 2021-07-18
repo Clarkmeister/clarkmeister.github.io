@@ -1,1 +1,10 @@
-
+.header {
+    background-color: steelblue;
+    padding: 10px;
+    text-align: center;
+}
+.main-footer {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 10px;
+  }
