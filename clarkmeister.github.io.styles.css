@@ -1,20 +1,40 @@
 /* /Shared/MainLayout.razor.rz.scp.css */
-.header[b-9xaw4yo42u] {
-    background-color: steelblue;
-    padding: 10px;
+header[b-9xaw4yo42u] {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: 15vh;
+    background-color: rgb(83, 83, 83);
     text-align: center;
+    color: white;
 }
-.main-footer[b-9xaw4yo42u] {
-    background-color: #F1F1F1;
+
+footer[b-9xaw4yo42u] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    position: absolute;
+    bottom:0;
+    background-color: rgb(83, 83, 83);
     text-align: center;
-    padding: 10px;
-  }
+    color: white;
+}
+
+header p[b-9xaw4yo42u] {
+    margin: 0px;
+    font-size: 24px;
+}
+
+footer p[b-9xaw4yo42u] {
+    margin: 0px;
+}
 /* /Shared/NavMenu.razor.rz.scp.css */
 /* Style the top navigation bar */
 .nav-bar[b-v57ecgij0t] {
     overflow: hidden;
     background-color: #333;
-    list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */
     margin: 0; /* Remove margins */
   }
@@ -38,13 +58,22 @@
   .menu-btn[b-v57ecgij0t] {
     background-color: #3498DB;
     color: white;
-    padding: 16px;
+    height: 9vh;
+    width: 9vh;
     font-size: 16px;
     border: none;
     cursor: pointer;
     float: right;
+    border: #333;
+    border-style: solid;
+    border-width: 1px;
   }
 
+  .nav-div[b-v57ecgij0t] {
+    border: #333;
+    border-style: hidden solid solid solid;
+    border-width: 1px;
+  }
   .nav-list[b-v57ecgij0t] {
     list-style-type: none;
     margin: 0;
