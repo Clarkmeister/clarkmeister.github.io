@@ -35,6 +35,7 @@ footer p[b-9xaw4yo42u] {
 .nav-bar[b-v57ecgij0t] {
     overflow: hidden;
     background-color: #333;
+    list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */
     margin: 0; /* Remove margins */
   }
@@ -58,12 +59,11 @@ footer p[b-9xaw4yo42u] {
   .menu-btn[b-v57ecgij0t] {
     background-color: #3498DB;
     color: white;
-    height: 9vh;
-    width: 9vh;
+    padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    float: right;
+    float: left;
     border: #333;
     border-style: solid;
     border-width: 1px;
