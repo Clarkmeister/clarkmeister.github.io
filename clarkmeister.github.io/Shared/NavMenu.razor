@@ -1,16 +1,14 @@
-﻿<div>
-    <ul class="nav-bar">
-        <li class="nav-item">
-            <button class="menu-btn" @onclick="ToggleNavMenu">
-                 <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="40px" height="40px"><path fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="2" d="M2 12L22 12M2 6L22 6M2 18L22 18"/></svg>
-            </button>
-        </li>
-    </ul>
-</div>
+﻿@inject IJSRuntime JS
 
-@if (!collapseNavMenu)
-{
-<div class="nav-div">
+<ul class="nav-bar">
+    <li class="nav-item">
+        <button class="menu-btn" @onclick="ToggleNavMenu">
+                <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="40px" height="40px"><path fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="2" d="M2 12L22 12M2 6L22 6M2 18L22 18"/></svg>
+        </button>
+    </li>
+</ul>
+
+<div class=@((collapseNavMenu? "nav-div" : "nav-div-hidden"))>
     <ul class="nav-list">
         <li class="nav-link">
             <NavLink href="" Match="NavLinkMatch.All" @onclick="ToggleNavMenu">
@@ -24,10 +22,9 @@
         </li>
     </ul>
 </div>
-}
 
 @code {
-    private bool collapseNavMenu = true;
+    private bool collapseNavMenu = false;
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
