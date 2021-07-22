@@ -3,11 +3,41 @@
 @implements IAsyncDisposable
 @inject IJSRuntime JS
 
+<style>
+    #fullscreen-div {
+        background-color: red;
+        height: 20vh;
+        width: 20vw;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align: center;
+        color: white;
+    }
+    #fullscreen-div:fullscreen {
+        position:absolute;
+        width: 100vw;
+        height: 100vh;
+        top:0;
+        left:0;
+        background-color: steelblue;
+    }
+    #fullscreen-div:-webkit-full-screen {
+        position:absolute;
+        width: 100vw;
+        height: 100vh;
+        top:0;
+        left:0;
+        background-color: steelblue;
+    }
+</style>
     <NavMenu />
     <h1>Fullscreen test example</h1>
-    <div id="fullscreen-div">
-        <button @onclick="TriggerPromptOld">Trigger browser window prompt</button>
-        <p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
+    <div style="height: 25vh; width: 20vw; background-color: black">
+        <div id="fullscreen-div">
+            Full Screen 
+        </div>
+        <button style="width: 20vw; height 5vh; padding: 6px 0px" @onclick="TriggerPrompt">Go Fullscreen</button>
     </div>
 
 @code {
@@ -22,11 +52,8 @@
     }
     private void TriggerPrompt()
     {
-        module.InvokeAsync<string>("toggleFullscreen");
-    }
-    private void TriggerPromptOld()
-    {
         module.InvokeAsync<string>("openFullscreen");
+        StateHasChanged();
     }
     async ValueTask IAsyncDisposable.DisposeAsync()
     {
