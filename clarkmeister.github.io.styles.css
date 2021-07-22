@@ -1,35 +1,5 @@
 /* /Shared/MainLayout.razor.rz.scp.css */
-header[b-9xaw4yo42u] {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height: 15vh;
-    background-color: rgb(83, 83, 83);
-    text-align: center;
-    color: white;
-}
 
-footer[b-9xaw4yo42u] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    width: 100vw;
-    position: absolute;
-    bottom:0;
-    background-color: rgb(83, 83, 83);
-    text-align: center;
-    color: white;
-}
-
-header p[b-9xaw4yo42u] {
-    margin: 0px;
-    font-size: 24px;
-}
-
-footer p[b-9xaw4yo42u] {
-    margin: 0px;
-}
 /* /Shared/NavMenu.razor.rz.scp.css */
 /* Style the top navigation bar */
 .nav-bar[b-v57ecgij0t] {
