@@ -1,0 +1,38 @@
+@page "/fullscreen"
+@layout Blank
+@implements IAsyncDisposable
+@inject IJSRuntime JS
+
+    <NavMenu />
+    <h1>Fullscreen test example</h1>
+    <div id="fullscreen-div">
+        <button @onclick="TriggerPromptOld">Trigger browser window prompt</button>
+        <p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
+    </div>
+
+@code {
+    private IJSObjectReference module;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            module = await JS.InvokeAsync<IJSObjectReference>("import", "./scripts.js");
+        }
+    }
+    private void TriggerPrompt()
+    {
+        module.InvokeAsync<string>("toggleFullscreen");
+    }
+    private void TriggerPromptOld()
+    {
+        module.InvokeAsync<string>("openFullscreen");
+    }
+    async ValueTask IAsyncDisposable.DisposeAsync()
+    {
+        if (module is not null)
+        {
+            await module.DisposeAsync();
+        }
+    }
+}
