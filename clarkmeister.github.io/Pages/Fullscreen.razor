@@ -5,7 +5,7 @@
 
 <style>
     #fullscreen-div {
-        background-color: red;
+        background-color: steelblue;
         height: 20vh;
         width: 20vw;
         display:flex;
@@ -32,15 +32,13 @@
     }
 </style>
     <NavMenu />
-    <h1>Fullscreen test example</h1>
-    <div style="height: 25vh; width: 20vw; background-color: black">
-        <div id="fullscreen-div">
-            Fullscreen Element
-        </div>
-        <button style="width: 20vw; height 5vh; padding: 6px 0px" @onclick="TriggerPrompt">Go Fullscreen</button>
+    <h1>Fullscreen Example</h1>
+    <div id="fullscreen-div">
+        <img height="100%" src="images/owl.png" alt="Hawk Picture">
     </div>
+    <button style="width: 20vw; height 5vh; padding: 6px 0px" @onclick="TriggerPrompt">Go Fullscreen</button>
     <br>
-    <p>Element will turn blue on fullscreen, does not work on mobile</p>
+    <p>Does not work on mobile iOS</p>
 
 @code {
     private IJSObjectReference module;
