@@ -6,11 +6,17 @@
         width: 100vw;
         height: 100vh;
     }
+    @@media only screen and (min-width: 600px) {
+        iframe {
+            width: 100vw;
+            height: 100vh;
+        }
+    }
 </style>
 
 <main>
     <NavMenu />
     <div>
-        <iframe src=".\pdf\Arthur_Clark_Resume.pdf" height="200" width="300"></iframe>
+        <iframe src=".\pdf\Arthur_Clark_Resume.pdf#view=Fit"></iframe>
     </div>
 </main>
